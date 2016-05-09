@@ -22,10 +22,10 @@ public class Classmodel extends Figuremodel implements Cloneable {
 		Point UpperLeftCorner = new Point(0,0);
 		virtual = new Dimension(150, 80);
 		
-		elements.add(new LineElementForClassmodel(new Point(0,0), new Point(1000,0), Hold.END));
-		elements.add(new LineElementForClassmodel(new Point(1000,0), new Point(1000,1000), Hold.END));
-		elements.add(new LineElementForClassmodel(new Point(1000,1000), new Point(0,1000), Hold.END));
-		elements.add(new LineElementForClassmodel(new Point(0,1000), new Point(0,0), Hold.END));		
+		elements.add(new LineElementForClassmodel(new Point(0,0), new Point(1000,0), Hold.TRACE));
+		elements.add(new LineElementForClassmodel(new Point(1000,0), new Point(1000,1000), Hold.TRACE));
+		elements.add(new LineElementForClassmodel(new Point(1000,1000), new Point(0,1000), Hold.TRACE));
+		elements.add(new LineElementForClassmodel(new Point(0,1000), new Point(0,0), Hold.TRACE));		
 	}	
 
 	@Override
