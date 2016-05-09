@@ -18,15 +18,15 @@ public class LineElementForClassmodel extends LineElement {
 		ArrayList<Point> pl = new ArrayList<Point>();
 		
 		if(virtualstop.x - virtualstart.x != 0 && virtualstop.y - virtualstart.y == 0) { // x diff is !0 and y diff is 0 => line is horizontal
-			Point point1 = new Point(((realstart.x + realstop.x) / 3), (realstart.y + realstop.y));
-			Point point2 = new Point(((realstart.x + realstop.x) / 3) * 2, (realstart.y + realstop.y));					
+			Point point1 = new Point(((realstart.x + realstop.x) / 3), (realstart.y + realstop.y)/2);
+			Point point2 = new Point(((realstart.x + realstop.x) / 3) * 2, (realstart.y + realstop.y)/2);					
 			
 			pl.add(point1);
 			pl.add(point2);	
 		}
-		else { // line is not horizontal
-			Point point1 = new Point(((realstart.x + realstop.x)), (realstart.y + realstop.y) / 3);
-			Point point2 = new Point(((realstart.x + realstop.x)), ((realstart.y + realstop.y) / 3) * 2);
+		else { // line is !horizontal
+			Point point1 = new Point(((realstart.x + realstop.x)/2), (realstart.y + realstop.y) / 3);
+			Point point2 = new Point(((realstart.x + realstop.x)/2), ((realstart.y + realstop.y) / 3) * 2);
 			
 			pl.add(point1);
 			pl.add(point2);
