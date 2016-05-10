@@ -3,7 +3,7 @@ package uml.model;
 import java.awt.Dimension;
 import java.awt.Point;
 
-import figure.graphics.LineElementForNodeModel;
+import figure.graphics.LineElementForNodemodel;
 import figure.graphics.TextElement;
 import figure.model.Figuremodel;
 import figure.model.IFigure.Hold;
@@ -41,15 +41,15 @@ public class Nodemodel  extends Figuremodel implements Cloneable{
 	}
 	
 	private void drawNode(Point n1, Point n2, Point n3, Point n4, Point n5, Point n6, Point n7) {
-		elements.add(new LineElementForNodeModel (n1, n2, Hold.NONE));
-		elements.add(new LineElementForNodeModel (n1, n3, Hold.TRACE));
-		elements.add(new LineElementForNodeModel (n2, n4, Hold.NONE));
-		elements.add(new LineElementForNodeModel (n3, n4, Hold.TRACE));
-		elements.add(new LineElementForNodeModel (n1, n5, Hold.NONE));
-		elements.add(new LineElementForNodeModel (n5, n6, Hold.TRACE));
-		elements.add(new LineElementForNodeModel (n6, n7, Hold.TRACE));
-		elements.add(new LineElementForNodeModel (n2, n6, Hold.NONE));
-		elements.add(new LineElementForNodeModel (n4, n7, Hold.NONE));
+		elements.add(new LineElementForNodemodel (n1, n2, Hold.NONE));
+		elements.add(new LineElementForNodemodel (n1, n3, Hold.TRACE));
+		elements.add(new LineElementForNodemodel (n2, n4, Hold.NONE));
+		elements.add(new LineElementForNodemodel (n3, n4, Hold.TRACE));
+		elements.add(new LineElementForNodemodel (n1, n5, Hold.NONE));
+		elements.add(new LineElementForNodemodel (n5, n6, Hold.TRACE));
+		elements.add(new LineElementForNodemodel (n6, n7, Hold.TRACE));
+		elements.add(new LineElementForNodemodel (n2, n6, Hold.NONE));
+		elements.add(new LineElementForNodemodel (n4, n7, Hold.NONE));
 	}
 
 	protected Figuremodel instance(int x, int y) {

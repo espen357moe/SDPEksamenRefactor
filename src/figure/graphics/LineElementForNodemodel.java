@@ -3,9 +3,9 @@ package figure.graphics;
 import java.awt.Point;
 import java.util.ArrayList;
 
-public class LineElementForNodeModel extends LineElement {
+public class LineElementForNodemodel extends LineElement {
 
-	public LineElementForNodeModel(Point a, Point b, Hold c) {
+	public LineElementForNodemodel(Point a, Point b, Hold c) {
 		super(a, b, c);
 	}
 

@@ -8,7 +8,7 @@ import figure.graphics.LineElement;
 import figure.graphics.TextElement;
 import figure.model.Figuremodel;
 
-public class Actormodel extends Figuremodel implements Cloneable {
+public class Actormodel extends Figuremodel {
 
 	// Figuren plasseres på en virtuell flate på 1000X1000
 	// Figurens mål er innenfor en ny virtuell flate på 1000X1000
