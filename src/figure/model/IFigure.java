@@ -10,7 +10,7 @@ public interface IFigure {
 	double VIRTUAL_HEIGHT = 1000;
 	Dimension SCREEN = new Dimension(500, 500);
 	Font LABELFONT = new Font("monospace", Font.PLAIN, 11);
-	int HOTDISTANCE = 2;
+	int HOTDISTANCE = 5;
 
 	enum Hold {
 		NONE, FRONT, END, TRACE
