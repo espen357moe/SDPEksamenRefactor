@@ -3,12 +3,9 @@ package uml.model;
 import java.awt.Dimension;
 import java.awt.Point;
 
-import figure.graphics.LineElementForClassmodel;
 import figure.graphics.LineElementForPackagemodel;
 import figure.graphics.TextElement;
 import figure.model.Figuremodel;
-import figure.model.IFigure.Hold;
-import figure.model.IFigure.LabelAlign;
 
 public class Packagemodel extends Figuremodel implements Cloneable {
 	
