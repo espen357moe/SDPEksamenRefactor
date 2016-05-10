@@ -15,6 +15,7 @@ import uml.graphics.Thing;
 import uml.model.Actormodel;
 import uml.model.Business;
 import uml.model.Classmodel;
+import uml.model.Packagemodel;
 import uml.model.Usecasemodel;
 import figure.graphics.Figure;
 import figure.model.IFigure;
@@ -32,6 +33,7 @@ public class Domainview extends JPanel implements IFigure {
 		diagram.addFigure(new Usecasemodel(200, 55));
 		diagram.addFigure(new Classmodel(300, 60));
 		diagram.addFigure(new Business(400, 65));
+		diagram.addFigure(new Packagemodel(500, 70));
 		setShadow(Shadows.LOW.f());
 		setBackground(Color.WHITE);
 	}
