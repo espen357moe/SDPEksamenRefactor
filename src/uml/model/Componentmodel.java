@@ -40,9 +40,7 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		elements.add(new LineElement(new Point(650, 225), new Point(750, 225), Hold.NONE));
 		elements.add(new LineElement(new Point(750, 225), new Point(750, 275), Hold.NONE));
 		elements.add(new LineElement(new Point(750, 275), new Point(650, 275), Hold.NONE));
-		elements.add(new LineElement(new Point(650, 275), new Point(650, 225), Hold.NONE));
-		
-		
+		elements.add(new LineElement(new Point(650, 275), new Point(650, 225), Hold.NONE));		
 		
 		elements.add(new TextElement(":Component", LabelAlign.CENTER));
 	}
