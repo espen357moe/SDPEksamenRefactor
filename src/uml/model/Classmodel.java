@@ -19,7 +19,6 @@ public class Classmodel extends Figuremodel implements Cloneable {
 	public Classmodel (int x, int y){
 		figureName = "Class";
 		start = new Point(x, y);
-		Point UpperLeftCorner = new Point(0,0);
 		virtual = new Dimension(150, 80);
 		
 		elements.add(new LineElementForClassmodel(new Point(0,0), new Point(1000,0), Hold.TRACE));
@@ -27,7 +26,7 @@ public class Classmodel extends Figuremodel implements Cloneable {
 		elements.add(new LineElementForClassmodel(new Point(1000,1000), new Point(0,1000), Hold.TRACE));
 		elements.add(new LineElementForClassmodel(new Point(0,1000), new Point(0,0), Hold.TRACE));
 		
-		elements.add(new TextElement("Klasse", LabelAlign.CENTER));
+		elements.add(new TextElement("Class", LabelAlign.CENTER));
 	}	
 
 	@Override
