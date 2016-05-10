@@ -17,10 +17,17 @@ public class Packagemodel extends Figuremodel implements Cloneable {
 		start = new Point(x, y);
 		virtual = new Dimension(150, 80);
 		
-		elements.add(new LineElementForPackagemodel(new Point(0,0), new Point(1000,0), Hold.TRACE));
-		elements.add(new LineElementForPackagemodel(new Point(1000,0), new Point(1000,1000), Hold.TRACE));
+		// draw package tab
+		elements.add(new LineElementForPackagemodel(new Point(0,0), new Point(400,0), Hold.NONE));
+		elements.add(new LineElementForPackagemodel(new Point(400,0), new Point(400,200), Hold.NONE));
+		elements.add(new LineElementForPackagemodel(new Point(400, 200), new Point(0, 200), Hold.NONE));
+		elements.add(new LineElementForPackagemodel(new Point(0,200), new Point(0,0), Hold.NONE));
+		
+		// draw package body
+		elements.add(new LineElementForPackagemodel(new Point(0,200), new Point(1000,200), Hold.TRACE));
+		elements.add(new LineElementForPackagemodel(new Point(1000,200), new Point(1000,1000), Hold.TRACE));
 		elements.add(new LineElementForPackagemodel(new Point(1000,1000), new Point(0,1000), Hold.TRACE));
-		elements.add(new LineElementForPackagemodel(new Point(0,1000), new Point(0,0), Hold.TRACE));
+		elements.add(new LineElementForPackagemodel(new Point(0,1000), new Point(0,200), Hold.TRACE));
 		
 		elements.add(new TextElement("Package", LabelAlign.CENTER));
 		
