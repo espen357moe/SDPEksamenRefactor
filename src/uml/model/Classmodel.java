@@ -11,17 +11,21 @@ public class Classmodel extends Figuremodel implements Cloneable {
 	public Classmodel (int x, int y){
 		figureName = "Class";
 		start = new Point(x, y);
-		virtual = new Dimension(150, 80);
+		virtual = new Dimension(150, 150);
 		
-		elements.add(new LineElementForClassmodel(new Point(0,0), new Point(1000,0), Hold.TRACE));
-		elements.add(new LineElementForClassmodel(new Point(1000,0), new Point(1000,1000), Hold.TRACE));
-		elements.add(new LineElementForClassmodel(new Point(1000,1000), new Point(0,1000), Hold.TRACE));
-		elements.add(new LineElementForClassmodel(new Point(0,1000), new Point(0,0), Hold.TRACE));
+		Point p1 = new Point(10, 10);
+		Point p2 = new Point(990, 10);
+		Point p3 = new Point(990, 990);
+		Point p4 = new Point(10, 990);
+		
+		elements.add(new LineElementForClassmodel(p1, p2, Hold.TRACE));
+		elements.add(new LineElementForClassmodel(p2, p3, Hold.TRACE));
+		elements.add(new LineElementForClassmodel(p3, p4, Hold.TRACE));
+		elements.add(new LineElementForClassmodel(p4 ,p1, Hold.TRACE));
 		
 		elements.add(new TextElement("Class", LabelAlign.CENTER));
 	}	
 
-	@Override
 	protected Figuremodel instance(int x, int y) {
 		return new Classmodel(x, y);
 	}

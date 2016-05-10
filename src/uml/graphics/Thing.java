@@ -11,13 +11,15 @@ import figure.model.Scaler;
 
 public class Thing extends MoveableFigure {
 
+	private int translationOffset;
 	private Dimension thing;
 	public ArrayList<Point> anchors = new ArrayList<Point>();
 
-	public Thing(Figuremodel figuremodel) {
+	public Thing(Figuremodel figuremodel) {	
+		translationOffset = 1; // harmonizes symbol drawing and shadow
 		model = figuremodel;
 		thing = model.realDimension(new Scaler(SCREEN));
-		setBounds(model.start.x, model.start.y, thing.width, thing.height);
+		setBounds(model.start.x, model.start.y, thing.width + translationOffset, thing.height + translationOffset);
 		realpixels(model);
 	}
 

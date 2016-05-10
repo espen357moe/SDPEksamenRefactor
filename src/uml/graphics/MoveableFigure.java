@@ -26,7 +26,7 @@ abstract class MoveableFigure extends Figure implements MouseMotionListener {
 
 	public void mouseMoved(MouseEvent e) {
 		offset = e.getPoint();
-		markMovable(moveable = isHot(e.getPoint()));		
+		markMovable(moveable = isHot(e.getPoint()));
 	}
 
 	{
