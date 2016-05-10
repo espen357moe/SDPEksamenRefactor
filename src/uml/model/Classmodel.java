@@ -11,7 +11,7 @@ public class Classmodel extends Figuremodel implements Cloneable {
 	public Classmodel (int x, int y){
 		figureName = "Class";
 		start = new Point(x, y);
-		virtual = new Dimension(150, 150);
+		virtual = new Dimension(150, 100);
 		
 		Point p1 = new Point(10, 10);
 		Point p2 = new Point(990, 10);
