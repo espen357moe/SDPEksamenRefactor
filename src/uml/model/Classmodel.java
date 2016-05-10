@@ -2,17 +2,9 @@ package uml.model;
 
 import java.awt.Dimension;
 import java.awt.Point;
-import java.awt.Shape;
-import java.awt.geom.PathIterator;
-import java.util.ArrayList;
-
-import figure.graphics.EllipseElement;
-import figure.graphics.LineElement;
 import figure.graphics.LineElementForClassmodel;
 import figure.graphics.TextElement;
 import figure.model.Figuremodel;
-import figure.model.IFigure.Hold;
-import figure.model.IFigure.LabelAlign;
 
 public class Classmodel extends Figuremodel implements Cloneable {
 	
