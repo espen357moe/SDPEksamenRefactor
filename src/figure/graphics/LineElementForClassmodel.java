@@ -1,11 +1,7 @@
 package figure.graphics;
 
 import java.awt.Point;
-import java.awt.Shape;
-import java.awt.geom.PathIterator;
 import java.util.ArrayList;
-
-import figure.model.IFigure.Hold;
 
 public class LineElementForClassmodel extends LineElement {
 
