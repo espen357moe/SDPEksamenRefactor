@@ -15,11 +15,16 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		start = new Point(x, y);
 		virtual = new Dimension(150, 100);
 		
+		Point p1 = new Point(10, 10);
+		Point p2 = new Point(990, 10);
+		Point p3 = new Point(990, 990);
+		Point p4 = new Point(10, 990);
+		
 		// draw component body
-		elements.add(new LineElementForComponentmodel(new Point(0,0), new Point(1000,0), Hold.TRACE));
-		elements.add(new LineElementForComponentmodel(new Point(1000,0), new Point(1000,1000), Hold.TRACE));
-		elements.add(new LineElementForComponentmodel(new Point(1000,1000), new Point(0,1000), Hold.TRACE));
-		elements.add(new LineElementForComponentmodel(new Point(0,1000), new Point(0,0), Hold.TRACE));
+		elements.add(new LineElementForComponentmodel(p1, p2, Hold.TRACE));
+		elements.add(new LineElementForComponentmodel(p2, p3, Hold.TRACE));
+		elements.add(new LineElementForComponentmodel(p3, p4, Hold.TRACE));
+		elements.add(new LineElementForComponentmodel(p4, p1, Hold.TRACE));
 		
 		// draw component symbol detail
 		elements.add(new LineElement(new Point(700, 50), new Point(900, 50), Hold.NONE));
