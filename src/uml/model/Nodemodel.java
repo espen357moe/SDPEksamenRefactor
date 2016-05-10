@@ -8,7 +8,7 @@ import figure.graphics.TextElement;
 import figure.model.Figuremodel;
 import figure.model.IFigure.Hold;
 
-public class Nodemodel  extends Figuremodel{
+public class Nodemodel  extends Figuremodel implements Cloneable{
 
 	/*
 	    n5_____________n6
@@ -25,7 +25,7 @@ public class Nodemodel  extends Figuremodel{
 	public Nodemodel(int x, int y) {
 		figureName = "Nodemodel";
 		start = new Point(x, y);
-		virtual = new Dimension(100, 100);
+		virtual = new Dimension(150, 100);
 		
 		Point n1 = new Point (10,150);
 		Point n2 = new Point (850,150);
