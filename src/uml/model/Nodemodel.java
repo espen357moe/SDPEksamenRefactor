@@ -1,0 +1,58 @@
+package uml.model;
+
+import java.awt.Dimension;
+import java.awt.Point;
+
+import figure.graphics.LineElementForNodeModel;
+import figure.graphics.TextElement;
+import figure.model.Figuremodel;
+import figure.model.IFigure.Hold;
+
+public class Nodemodel  extends Figuremodel{
+
+	/*
+	    n5_____________n6
+	   /			   /|
+	  /			      /	|
+	 n1-------------n2	|
+	 |				 |	|
+	 |				 |	|
+	 |				 |	n7
+	 n3_____________n4/
+	 
+	 */
+
+	public Nodemodel(int x, int y) {
+		figureName = "Nodemodel";
+		start = new Point(x, y);
+		virtual = new Dimension(100, 100);
+		
+		Point n1 = new Point (10,150);
+		Point n2 = new Point (850,150);
+		Point n3 = new Point (10,990);
+		Point n4 = new Point (850,990);
+		Point n5 = new Point (150,10);
+		Point n6 = new Point (990,10);
+		Point n7 = new Point (990,850);
+
+		drawNode(n1,n2,n3,n4,n5,n6,n7);
+		
+		elements.add(new TextElement("Node", LabelAlign.CENTER));
+	}
+	
+	private void drawNode(Point n1, Point n2, Point n3, Point n4, Point n5, Point n6, Point n7) {
+		elements.add(new LineElementForNodeModel (n1, n2, Hold.NONE));
+		elements.add(new LineElementForNodeModel (n1, n3, Hold.TRACE));
+		elements.add(new LineElementForNodeModel (n2, n4, Hold.NONE));
+		elements.add(new LineElementForNodeModel (n3, n4, Hold.TRACE));
+		elements.add(new LineElementForNodeModel (n1, n5, Hold.NONE));
+		elements.add(new LineElementForNodeModel (n5, n6, Hold.TRACE));
+		elements.add(new LineElementForNodeModel (n6, n7, Hold.TRACE));
+		elements.add(new LineElementForNodeModel (n2, n6, Hold.NONE));
+		elements.add(new LineElementForNodeModel (n4, n7, Hold.NONE));
+	}
+
+	protected Figuremodel instance(int x, int y) {
+		return new Nodemodel(x, y);
+	}
+}
