@@ -20,6 +20,10 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		Point p3 = new Point(990, 990);
 		Point p4 = new Point(10, 990);
 		
+		drawSymbol(p1, p2, p3, p4);
+	}
+
+	private void drawSymbol(Point p1, Point p2, Point p3, Point p4) {
 		// draw component body
 		elements.add(new LineElementForComponentmodel(p1, p2, Hold.TRACE));
 		elements.add(new LineElementForComponentmodel(p2, p3, Hold.TRACE));
