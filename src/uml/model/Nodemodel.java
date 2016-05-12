@@ -6,7 +6,6 @@ import java.awt.Point;
 import figure.graphics.LineElementForNodemodel;
 import figure.graphics.TextElement;
 import figure.model.Figuremodel;
-import figure.model.IFigure.Hold;
 
 public class Nodemodel  extends Figuremodel implements Cloneable{
 

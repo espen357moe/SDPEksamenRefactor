@@ -7,7 +7,6 @@ import figure.graphics.LineElement;
 import figure.graphics.LineElementForComponentmodel;
 import figure.graphics.TextElement;
 import figure.model.Figuremodel;
-import figure.model.IFigure.Hold;
 
 public class Componentmodel extends Figuremodel implements Cloneable {
 	
