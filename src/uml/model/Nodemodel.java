@@ -21,19 +21,20 @@ public class Nodemodel  extends Figuremodel implements Cloneable{
 	 n3_____________n4/
 	 
 	 */
-
+	private Point n1, n2, n3, n4, n5, n6, n7;
+	
 	public Nodemodel(int x, int y) {
 		figureName = "Nodemodel";
 		start = new Point(x, y);
 		virtual = new Dimension(150, 100);
 		
-		Point n1 = new Point (10,150);
-		Point n2 = new Point (850,150);
-		Point n3 = new Point (10,990);
-		Point n4 = new Point (850,990);
-		Point n5 = new Point (150,10);
-		Point n6 = new Point (990,10);
-		Point n7 = new Point (990,850);
+		n1 = new Point (10,150);
+		n2 = new Point (850,150);
+		n3 = new Point (10,990);
+		n4 = new Point (850,990);
+		n5 = new Point (150,10);
+		n6 = new Point (990,10);
+		n7 = new Point (990,850);
 
 		drawNode(n1,n2,n3,n4,n5,n6,n7);
 		

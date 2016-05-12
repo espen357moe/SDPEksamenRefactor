@@ -22,20 +22,23 @@ public class Packagemodel extends Figuremodel implements Cloneable {
 	 p8----------------p7
 	 */
 	
+	private Point p1, p2, p3, p4, p5, p6, p7, p8;
+
+	
 	public Packagemodel(int x, int y){
 		figureName = "Package";
 		start = new Point(x, y);
 		virtual = new Dimension(150, 100);
 		
-		Point p1 = new Point(10, 10);
-		Point p2 = new Point(400, 10);
-		Point p3 = new Point(400, 200);
-		Point p4 = new Point(10, 200);
+		 p1 = new Point(10, 10);
+		 p2 = new Point(400, 10);
+		 p3 = new Point(400, 200);
+		 p4 = new Point(10, 200);
 		
-		Point p5 = new Point(10, 200);
-		Point p6 = new Point(990, 200);
-		Point p7 = new Point(990, 990);
-		Point p8 = new Point(10, 990);
+		 p5 = new Point(10, 200);
+		 p6 = new Point(990, 200);
+		 p7 = new Point(990, 990);
+		 p8 = new Point(10, 990);
 		
 		// draw package tab
 		elements.add(new LineElementForPackagemodel(p1, p2, Hold.NONE));
