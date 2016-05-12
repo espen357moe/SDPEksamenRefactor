@@ -9,15 +9,11 @@ public class LineElementForClassmodel extends LineElement {
 		super(a, b, c);
 	}
 
-	// lag på nytt når nødvendig
 	protected ArrayList<Point> traceresult() {
 		ArrayList<Point> pl = new ArrayList<Point>();
 		
-		Point p1 = interpolate(realstart, realstop, 0.33);						
-		Point p2 = interpolate(realstart, realstop, 0.66);	
-		
-		pl.add(p1);
-		pl.add(p2);				
+		pl.add(interpolate(realstart, realstop, 0.33));						
+		pl.add(interpolate(realstart, realstop, 0.66));						
 		
 		return pl;
 	}		
