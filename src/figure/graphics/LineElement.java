@@ -21,5 +21,9 @@ public class LineElement extends ConnectElement {
 	public boolean isHot(Point d) {
 		return ((Line2D.Double) element).ptLineDist(d) < HOTDISTANCE;
 	}
+	
+	public Point interpolate(Point a, Point b, double t) {
+	    return new Point((int)(a.x + (b.x - a.x) * t), (int)(a.y + (b.y - a.y) * t));
+	}
 
 }

@@ -20,9 +20,5 @@ public class LineElementForClassmodel extends LineElement {
 		pl.add(p2);				
 		
 		return pl;
-	}
-	
-	public Point interpolate(Point a, Point b, double t) {
-	    return new Point((int)(a.x + (b.x - a.x) * t), (int)(a.y + (b.y - a.y) * t));
-	}
+	}		
 }
