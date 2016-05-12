@@ -10,6 +10,30 @@ import figure.model.Figuremodel;
 
 public class Componentmodel extends Figuremodel implements Cloneable {
 	
+	/*
+	 Large ractangle
+	 lr1___________lr2
+	 |			   |
+	 lr3___________lr4
+	 	 
+	 Small rectangle
+	 sr1-------sr2
+	 |			|
+	 |			|
+	 sr3-------sr4
+	 
+	 component rectangle
+	 cr1---cr2
+	 |		|
+	 cr3---cr4
+	 
+	 cr5---cr6
+	 |		|
+	 cr7---cr8
+	 
+	 */
+	
+	
 	public Componentmodel(int x, int y) {
 		figureName = "Component";
 		start = new Point(x, y);

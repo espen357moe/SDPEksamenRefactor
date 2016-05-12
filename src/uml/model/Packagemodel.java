@@ -9,6 +9,19 @@ import figure.model.Figuremodel;
 
 public class Packagemodel extends Figuremodel implements Cloneable {
 	
+	/*
+    sr1_____sr2
+	 |		|
+	 sr3____sr4
+	 lr1-----------------lr2
+	 |					|
+	 |					|
+	 |		Package		|
+	 |					|
+	 |					|
+	 lr3----------------lr4
+	 */
+	
 	public Packagemodel(int x, int y){
 		figureName = "Package";
 		start = new Point(x, y);

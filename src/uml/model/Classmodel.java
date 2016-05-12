@@ -8,6 +8,16 @@ import figure.model.Figuremodel;
 
 public class Classmodel extends Figuremodel implements Cloneable {
 	
+	/*
+	 r1-----------------r2
+	 |					|
+	 |					|
+	 |		Package		|
+	 |					|
+	 |					|
+	 r3----------------r4
+	 */
+	
 	public Classmodel (int x, int y){
 		figureName = "Class";
 		start = new Point(x, y);
