@@ -9,21 +9,18 @@ public class LineElementForNodemodel extends LineElement {
 		super(a, b, c);
 	}
 
-	// lag på nytt når nødvendig
 	protected ArrayList<Point> traceresult() {
 		ArrayList<Point> pl = new ArrayList<Point>();
-				
-		if(virtualstop.x - virtualstart.x != 0 && virtualstop.y - virtualstart.y == 0) { // x diff is !0 and y diff is 0 => line is horizontal
-			for (int i = 1; i < 4; i++){
-				pl.add(new Point (((realstop.x + realstart.x) / 4) * i, realstart.y));
-			}
-		}
-		else { // line is !horizontal
-			for(int i = 1; i < 4; i++) {
-				pl.add(new Point((realstart.x), ((realstop.y + realstart.y) / 4) * i));
-			}
-		}
+		
+		Point p1 = interpolate(realstart, realstop, 0.25);
+		Point p2 = interpolate (realstart, realstop, 0.5);
+		Point p3 = interpolate(realstart, realstop, 0.75);	
+		
+		
+		pl.add(p1);
+		pl.add(p2);		
+		pl.add(p3);
+		
 		return pl;
-	}
-
+	}		
 }

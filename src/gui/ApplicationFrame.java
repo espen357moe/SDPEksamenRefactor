@@ -2,6 +2,8 @@ package gui;
 
 import java.awt.event.ActionEvent;
 
+import javax.swing.JFrame;
+
 import controller.Controller;
 import easylib.gui.Superframe;
 
@@ -13,6 +15,7 @@ public class ApplicationFrame extends Superframe  {
 		Controller.init(this);
 		setTitle("Figurer og forbindelser");
 		add(centerpane = new Centerpane());
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setJMenuBar(new MenuController());
 		setVisible(true);
 	}
