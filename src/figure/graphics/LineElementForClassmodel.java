@@ -13,14 +13,16 @@ public class LineElementForClassmodel extends LineElement {
 	protected ArrayList<Point> traceresult() {
 		ArrayList<Point> pl = new ArrayList<Point>();
 		
-		if(virtualstop.x - virtualstart.x != 0 && virtualstop.y - virtualstart.y == 0) { // x diff is !0 and y diff is 0 => line is horizontal
-			pl.add(new Point(((realstart.x + realstop.x) / 3), (realstart.y)));
-			pl.add(new Point(((realstart.x + realstop.x) / 3) * 2, (realstart.y)));								
-		}
-		else { // line is !horizontal
-			pl.add(new Point(((realstart.x)), (realstart.y + realstop.y) / 3));
-			pl.add(new Point(((realstart.x)), ((realstart.y + realstop.y) / 3) * 2));
-		}					
+		Point p1 = interpolate(realstart, realstop, 0.33);						
+		Point p2 = interpolate(realstart, realstop, 0.66);	
+		
+		pl.add(p1);
+		pl.add(p2);				
+		
 		return pl;
+	}
+	
+	public Point interpolate(Point a, Point b, double t) {
+	    return new Point((int)(a.x + (b.x - a.x) * t), (int)(a.y + (b.y - a.y) * t));
 	}
 }
