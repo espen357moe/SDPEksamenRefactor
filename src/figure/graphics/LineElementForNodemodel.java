@@ -13,9 +13,8 @@ public class LineElementForNodemodel extends LineElement {
 		ArrayList<Point> pl = new ArrayList<Point>();
 		
 		Point p1 = interpolate(realstart, realstop, 0.25);
-		Point p2 = interpolate (realstart, realstop, 0.5);
-		Point p3 = interpolate(realstart, realstop, 0.75);	
-		
+		Point p2 = interpolate(realstart, realstop, 0.5);
+		Point p3 = interpolate(realstart, realstop, 0.75);			
 		
 		pl.add(p1);
 		pl.add(p2);		
