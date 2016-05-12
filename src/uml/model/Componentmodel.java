@@ -18,7 +18,7 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 	 p4___________p3	 sr4-------sr3		 cr4---cr3	 cr8---cr7	 			 
 	 */
 	
-	private Point p1, p2, p3, p4;
+	private Point br1, br2, br3, br4;
 	private Point sr1, sr2,sr3,sr4;
 	private Point cr1,cr2,cr3,cr4,cr5,cr6,cr7,cr8;
 	
@@ -27,10 +27,10 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		start = new Point(x, y);
 		virtual = new Dimension(150, 100);
 		
-		p1 = new Point(10, 10);
-		p2 = new Point(990, 10);
-		p3 = new Point(990, 990);
-		p4 = new Point(10, 990);
+		br1 = new Point(10, 10);
+		br2 = new Point(990, 10);
+		br3 = new Point(990, 990);
+		br4 = new Point(10, 990);
 		
 		sr1 = new Point (700,50);
 		sr2 = new Point (900,50);
@@ -41,15 +41,14 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		cr2 = new Point (750,125);
 		cr3 = new Point (750,175);
 		cr4 = new Point (650,175);
-		
 		cr5 = new Point (650,225);
 		cr6 = new Point (750,225);
 		cr7 = new Point (750,275);
 		cr8 = new Point (650,275);
 		
-		drawBigRectangle(p1, p2, p3, p4);
+		drawBigRectangle(br1, br2, br3, br4);
 		drawSmallRectangle(sr1, sr2, sr4, sr3);
-		drawComponentRectangle(cr1,cr2,cr4,cr3,cr5,cr6,cr8,cr7);
+		drawComponentRectangles(cr1,cr2,cr4,cr3,cr5,cr6,cr8,cr7);
 		elements.add(new TextElement(":Component", LabelAlign.CENTER));
 	}
 
@@ -68,7 +67,7 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		elements.add(new LineElement (sr3, sr4, Hold.NONE));
 	}
 	
-	private void drawComponentRectangle(Point cr1, Point cr2, Point cr3, Point cr4, Point cr5, Point cr6, Point cr7, Point cr8) {
+	private void drawComponentRectangles(Point cr1, Point cr2, Point cr3, Point cr4, Point cr5, Point cr6, Point cr7, Point cr8) {
 		elements.add(new LineElement (cr1, cr2, Hold.NONE));
 		elements.add(new LineElement (cr1, cr3, Hold.NONE));
 		elements.add(new LineElement (cr2, cr4, Hold.NONE));
