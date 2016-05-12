@@ -10,16 +10,16 @@ import figure.model.Figuremodel;
 public class Packagemodel extends Figuremodel implements Cloneable {
 	
 	/*
-    sr1_____sr2
+    p1_____p2
 	 |		|
-	 sr3____sr4
-	 lr1-----------------lr2
+	 p4____p3
+	 p5-----------------p6
 	 |					|
 	 |					|
 	 |		Package		|
 	 |					|
 	 |					|
-	 lr3----------------lr4
+	 p8----------------p7
 	 */
 	
 	public Packagemodel(int x, int y){

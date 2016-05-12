@@ -9,13 +9,13 @@ import figure.model.Figuremodel;
 public class Classmodel extends Figuremodel implements Cloneable {
 	
 	/*
-	 r1-----------------r2
+	 p1-----------------p2
 	 |					|
 	 |					|
-	 |		Package		|
+	 |		Class		|
 	 |					|
 	 |					|
-	 r3----------------r4
+	 p4----------------p3
 	 */
 	
 	public Classmodel (int x, int y){
