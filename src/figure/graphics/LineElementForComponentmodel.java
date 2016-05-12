@@ -9,7 +9,6 @@ public class LineElementForComponentmodel extends LineElement {
 		super(a, b, c);
 	}
 	
-	// lag på nytt når nødvendig
 	protected ArrayList<Point> traceresult() {
 		ArrayList<Point> pl = new ArrayList<Point>();
 			
