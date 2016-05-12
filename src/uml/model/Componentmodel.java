@@ -13,9 +13,9 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 	
 	/*
 	 Large ractangle
-	 lr1___________lr2
+	 p1___________p2
 	 |			   |
-	 lr3___________lr4
+	 p4___________p3
 	 	 
 	 Small rectangle
 	 sr1-------sr2
@@ -26,14 +26,12 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 	 component rectangle
 	 cr1---cr2
 	 |		|
-	 cr3---cr4
+	 cr4---cr3
 	 
 	 cr5---cr6
 	 |		|
-	 cr7---cr8
-	 
-	 */
-	
+	 cr8---cr7	 
+	 */	
 	
 	public Componentmodel(int x, int y) {
 		figureName = "Component";
@@ -47,37 +45,31 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		
 		Point sr1 = new Point (700,50);
 		Point sr2 = new Point (900,50);
-		Point sr3 = new Point (700,350);
-		Point sr4 = new Point (900,350);
+		Point sr3 = new Point (900,350);
+		Point sr4 = new Point (700,350);
 		
 		Point cr1 = new Point (650,125);
 		Point cr2 = new Point (750,125);
-		Point cr3 = new Point (650,175);
-		Point cr4 = new Point (750,175);
+		Point cr3 = new Point (750,175);
+		Point cr4 = new Point (650,175);
 		
 		Point cr5 = new Point (650,225);
 		Point cr6 = new Point (750,225);
-		Point cr7 = new Point (650,275);
-		Point cr8 = new Point (750,275);
+		Point cr7 = new Point (750,275);
+		Point cr8 = new Point (650,275);
 		
 		drawBigRectangle(p1, p2, p3, p4);
-		drawSmallRectangle(sr1, sr2, sr3, sr4);
-		drawComponentRectangle(cr1,cr2,cr3,cr4,cr5,cr6,cr7,cr8);
+		drawSmallRectangle(sr1, sr2, sr4, sr3);
+		drawComponentRectangle(cr1,cr2,cr4,cr3,cr5,cr6,cr8,cr7);
+		elements.add(new TextElement(":Component", LabelAlign.CENTER));
 	}
 
 	private void drawBigRectangle(Point p1, Point p2, Point p3, Point p4) {
-		// draw component body
 		elements.add(new LineElementForComponentmodel(p1, p2, Hold.TRACE));
 		elements.add(new LineElementForComponentmodel(p2, p3, Hold.TRACE));
 		elements.add(new LineElementForComponentmodel(p3, p4, Hold.TRACE));
 		elements.add(new LineElementForComponentmodel(p4, p1, Hold.TRACE));
-/*
-		elements.add(new LineElement(new Point(650, 225), new Point(750, 225), Hold.NONE));
-		elements.add(new LineElement(new Point(750, 225), new Point(750, 275), Hold.NONE));
-		elements.add(new LineElement(new Point(750, 275), new Point(650, 275), Hold.NONE));
-		elements.add(new LineElement(new Point(650, 275), new Point(650, 225), Hold.NONE));		
-		*/
-		elements.add(new TextElement(":Component", LabelAlign.CENTER));
+
 	}
 	
 	private void drawSmallRectangle(Point sr1, Point sr2, Point sr3, Point sr4) {
@@ -98,7 +90,6 @@ public class Componentmodel extends Figuremodel implements Cloneable {
 		elements.add(new LineElement (cr7, cr8, Hold.NONE));
 	}
 	
-
 	@Override
 	protected Figuremodel instance(int x, int y) {
 		
